@@ -1,0 +1,10 @@
+.board{
+	text-align:center;
+}
+
+.board_list{
+	display:inline-block;
+}
+.header_box{
+	text-align:left;
+}
