@@ -9,7 +9,7 @@
 	String id = request.getParameter("id");
 	boolean result = mgr.insertMember(bean);
 	String msg = "회원가입에 실패함";
-	String location ="sign.jsp";
+	String location ="main.jsp";
 	if(result){
 		msg="회원가입 함";
 		location = "main.jsp";

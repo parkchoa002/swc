@@ -1,3 +1,9 @@
+.logout_btn{
+	
+  float: right;
+}
+
+
 
 .box_container {font-family: Arial, Helvetica, sans-serif;}
 
@@ -95,8 +101,8 @@ span.psw {
 
 /* Add Zoom Animation */ /*ok*/
 .animate2 {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+  -webkit-animation: animatezoom 0.1s;
+  animation: animatezoom 0.1s
 }
 
 @-webkit-keyframes animatezoom {

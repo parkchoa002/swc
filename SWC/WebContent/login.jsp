@@ -14,13 +14,13 @@
 <link rel="stylesheet" href="css/login.css">
 </head>
 <body class="box_container">
-
 <% if(id != null){%>
-<b><%=id%></b>님 환영합니다<br/><br/>
-<p>hello</p>
-<a href="logout.jsp">로그아웃</a>
+	<form action="logout.jsp">
+	<button class="btn" onclick="document.getElementById('id02').style.display='block'" style="width:100px; height=30px">logout</button>
+	</form>
+
 <%} else { %>
-<button class="btn" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+<button class="btn" onclick="document.getElementById('id02').style.display='block'" style="width:100px; height=30px">Login</button>
 
 <div id="id02" class="modal">
   
@@ -31,15 +31,15 @@
     </div>
 
     <div class="container2">
-      <label for="id"><b>Username</b></label>
+      <label for="id"><b>아이디</b></label>
       <input type="text" placeholder="Enter Username" name="id" required>
 
-      <label for="pwd"><b>Password</b></label>
+      <label for="pwd"><b>비밀번호</b></label>
       <input type="password" placeholder="Enter Password" name="pwd" required>
         
-      <button type="submit">Login</button>
+      <button type="submit">로그인</button>
       <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <input type="checkbox" checked="checked" name="remember"> 아이디 기억하기
       </label>
     </div>
 

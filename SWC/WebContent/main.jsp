@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+	String id = (String)session.getAttribute("idKey");
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,26 +13,27 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <div class="header_box">
-
-
+<% if(id!= null){ %>
+	<jsp:include page="login.jsp"/>
+<% }else{%>
 <jsp:include page="sign.jsp"/>
-<jsp:include page="login.jsp"/>
+	<jsp:include page="login.jsp"/>
+	
+<%
+} %>
+<hr/>
+<jsp:include page="menu.jsp"/>
+<jsp:include page="searchbar.jsp"/>
 <hr/>
 
 </div>
-<div class="contents">
-<ul class="board">
-	<li class="board_list">
-	<a href="..">게시판1</a></li>
-	<a href="..">게시판1</a></li>
-	<a href="..">게시판1</a></li>
-	<a href="..">게시판1</a></li>
-	<a href="..">게시판1</a></li>
-</ul>
-</div>
 
 <div class="footer_box">
+	<footer>
+	ㅁㄴㅇㅁㄴㅇ
+	</footer>
 </div>
 </body>
 </html>
