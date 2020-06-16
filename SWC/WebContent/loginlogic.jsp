@@ -28,8 +28,7 @@
 					Cookie c = cookies[i];
 					String cNAME = c.getName();
 					String cVALUE = c.getValue();
-					out.println(cNAME);
-					out.println(cVALUE);
+					
 				}
 			}
 		}
@@ -40,8 +39,8 @@
 	
 %>
 <script>
-	alert("<%=msg%>");
 	location.href="<%=url%>";
-	alert("<%=remember%>");
+
+	alert("<%=id%>")
 	
 </script>

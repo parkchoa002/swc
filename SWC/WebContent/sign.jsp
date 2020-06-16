@@ -36,6 +36,13 @@
       <input type="text" placeholder="Enter major" name="major" required>
       
 	  <label for="region"><b>지역</b></label>
+	  <select id="region" name="region" size=3>
+	  	<option value="서울">서울</option>
+	  	<option value="경기">경기</option>
+	  	<option value="강원">강원</option>
+	  	
+	  </select>
+	  
       <input type="text" placeholder="Enter region" name="region" required>
 
      <!-- <label for="psw-repeat"><b>Repeat Password</b></label>

@@ -18,7 +18,14 @@
 	<form action="logout.jsp">
 	<button class="btn" onclick="document.getElementById('id02').style.display='block'" style="width:100px; height=30px">logout</button>
 	</form>
-
+	<form action="updateform.jsp">
+	<button>update</button>
+	</form>
+	
+	<form action="deleteform.jsp">
+	<button>delete</button>
+	</form>
+	
 <%} else { %>
 <button class="btn" onclick="document.getElementById('id02').style.display='block'" style="width:100px; height=30px">Login</button>
 

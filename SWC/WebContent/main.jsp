@@ -15,21 +15,8 @@
 <body>
 
 <div class="header_box">
-<% if(id!= null){ %>
-	<jsp:include page="login.jsp"/>
-<% }else{%>
-<jsp:include page="sign.jsp"/>
-	<jsp:include page="login.jsp"/>
-	
-<%
-} %>
-<hr/>
-<jsp:include page="menu.jsp"/>
-<jsp:include page="searchbar.jsp"/>
-<hr/>
-
+<jsp:include page="header.jsp"/>
 </div>
-
 <div class="footer_box">
 	<footer>
 	けいしけいし
