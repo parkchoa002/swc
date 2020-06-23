@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="UTF-8"%>
+<jsp:useBean id="mMgr" class="member.memberMgr"/>
+<%
+
+	request.setCharacterEncoding("UTF-8");
+	String id = (String)session.getAttribute("idKey");
+	String pwd = request.getParameter("pwd");
+	String msg = "회원 탈퇴 실패";
+	String url = "main.jsp";
+	String message = "비밀번호 맞음";
+	boolean result2 = mMgr.deleteConfirm(id, pwd);
+	if(result2){
+		
+	
+	boolean result = mMgr.deleteMember(id, pwd);
+	if(result){
+		msg = "회원 탈퇴 성공";
+
+		session.invalidate();
+		
+	}
+	}else{
+
+		message = "비밀번호 다름";
+	}
+	
+%>
+<script>
+	location.href="<%=url%>";
+	alert("<%=msg%>");
+	alert("<%=id%>")
+	alert("<%=message%>");
+</script>
