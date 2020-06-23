@@ -15,8 +15,8 @@
 
 
 <div class="topnav_menu" id="myTopnav">
-  <a href="#news">게시판1</a>
-  <a href="#contact">게시판1</a>
+  <a href="#news">감나무</a>
+  <a href="#contact">은행나무</a>
   <a href="#about">게시판1</a>
   <a href="javascript:void(0);" class="icon_menu" onclick="myFunction()">
     <i class="fa fa-bars"></i>

@@ -74,7 +74,34 @@ public class memberMgr {
 		}
 		return flag;
 	}
+	public boolean deleteConfirm(String id, String pwd) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = null;
+		boolean flag = false;
+		try {
+			con = pool.getConnection();
+			sql = "select id from membertbl where id = ? and pwd = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pwd);
+			rs = pstmt.executeQuery();
+			flag = rs.next();
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e);
+		} finally {
+			pool.freeConnection(con, pstmt, rs);
+			System.out.println(con);
+			System.out.println(pstmt);
+			System.out.println(rs);
+			System.out.println(flag);
+		}
+		return flag;
+	}
 	
+	//È¸¿øÅ»Åð
 	public boolean deleteMember(String id, String pwd) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
