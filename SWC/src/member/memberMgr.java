@@ -131,6 +131,43 @@ public class memberMgr {
 		return flag;
 	}
 	
+	
+	//회원정보 수정
+	public boolean updateMember(memberBean bean) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = null;
+		boolean flag = false;
+		int a = 0;
+		try {
+			con = pool.getConnection();
+			sql = "update membertbl set pwd=?, email=?, years=?, major=?, region=? where id=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, bean.getPwd());
+			pstmt.setString(2, bean.getEmail());
+			pstmt.setString(3, bean.getYears());
+			pstmt.setString(4, bean.getMajor());
+			pstmt.setString(5, bean.getRegion());
+			pstmt.setString(6, bean.getId());
+
+			a = pstmt.executeUpdate();
+			pstmt.executeUpdate();
+			if (a == 1)
+				flag = true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e);
+		} finally {
+			pool.freeConnection(con, pstmt, rs);
+			System.out.println(a);
+			System.out.println(con);
+			System.out.println(pstmt);
+			System.out.println(rs);
+			System.out.println(flag);
+		}
+		return flag;
+	}
 
 
 }
